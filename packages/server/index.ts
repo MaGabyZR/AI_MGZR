@@ -8,17 +8,17 @@ dotenv.config();
 //Define a route and a route handler.
 //Route
 const app = express();
-const port = process.env.PORT || 3000; 
+const port = process.env.PORT || 3000;
 //Route handler.
-app.get('/', (req: Request, res:Response) => {
-    res.send('Thank you Monti!');
+app.get('/', (req: Request, res: Response) => {
+   res.send('Thank you Monti!');
 });
 
-app.get('/api/hello', (req: Request, res:Response) => {
-    res.json({ message: 'Hello Panzi!'});
-}); 
+app.get('/api/hello', (req: Request, res: Response) => {
+   res.json({ message: 'Hello Panzi!' });
+});
 
 //Start the webserver
 app.listen(port, () => {
-    console.log(`Server is running on http://localhost:${port}`);
+   console.log(`Server is running on http://localhost:${port}`);
 });
